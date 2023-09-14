@@ -1,1 +1,1 @@
-Conflict test made is GitHub
+Conflict test made is GitHub, second edit
