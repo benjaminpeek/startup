@@ -1,1 +1,1 @@
-Conflict test made is VS Code
+Conflict test made is GitHub
