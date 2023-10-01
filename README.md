@@ -1,4 +1,4 @@
-# startup
+# startup: Mom's Kitchen
 This is my repository for the Startup Application project in CS 260
 
 ## Notes
