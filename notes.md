@@ -7,3 +7,6 @@ This was a really interesting process! I got to experience what it's like to set
 
 ## Using Caddy to make my site secure
 This was one of the coolest experiences so far. Learning how to get into Caddy using the Terminal and making my site secure using Caddy was awesome, and it is super neat seeing my name in a URL!
+
+## HTML: structure
+It was fun seeing my own elements that I added to the CodePen come to life!
