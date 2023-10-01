@@ -10,3 +10,4 @@ This was one of the coolest experiences so far. Learning how to get into Caddy u
 
 ## HTML: structure
 It was fun seeing my own elements that I added to the CodePen come to life!
+[Here it is](https://codepen.io/Benjamin-Peek/pen/yLGqPMQ?editors=1100)
