@@ -52,4 +52,7 @@ For this deliverable, I made an HTML-only version of my application.
 - **Textual Content** Every recipe and cook is represented with text. Also, all the class technologies are currrently represented mainly with
   text. Additionally, the About section is filled in with text.
 - **Placeholders for 3rd Party Service Calls** Two of these are on the Home page, in the login form, where the user has the option to sign in using their credentials on the website or using their Google account.
-- **Images** I used two images, one for the home page and another for the about page.
+- **Applicatoin Images** I used two images, one for the home page and another for the about page.
+- **Login Placeholder** On the Home page, there is a placeholder for a login form.
+- **Database Data Placeholder** On the Profile page, there is a placeholder for database data in the recipe sections
+- **WebSocket Data Placeholder** On the Explore page,
