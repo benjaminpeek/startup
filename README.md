@@ -48,5 +48,6 @@ For this deliverable, I made an HTML-only version of my application.
 - **HTML Pages** For this version, I have 4 HTML pages: Home, Profile, Explore, and About. These pages will allow the user to interact with all the functionality of the website.
 - **Links** Every page links to each other through the navigation links in the header section of the HTML. There you can find links to Home, Profile, Explore, and About.
 - **Textual Content** Every recipe and cook is represented with text. Also, all the class technologies are currrently represented mainly with
-  text.
-- **yeah**
+  text. Additionally, the About section is filled in with text.
+- **Placeholders for 3rd Party Service Calls** Two of these are on the Home page, in the login form, where the user has the option to sign in using their credentials on the website or using their Google account.
+- **Images** I used two images, one for the home page and another for the about page.
