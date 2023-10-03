@@ -55,4 +55,4 @@ For this deliverable, I made an HTML-only version of my application.
 - **Applicatoin Images** I used two images, one for the home page and another for the about page.
 - **Login Placeholder** On the Home page, there is a placeholder for a login form.
 - **Database Data Placeholder** On the Profile page, there is a placeholder for database data in the recipe sections
-- **WebSocket Data Placeholder** On the Explore page,
+- **WebSocket Data Placeholder** On the Explore page, added the placeholders for information on most popular recipes and home cooks.
