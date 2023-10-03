@@ -43,7 +43,7 @@ Here is a sketchup of how Mom's Kitchen will look to the users:
 
 ## HTML Deliverable
 
-[Mom's Kitchen] (startup.benjaminpeek.com)
+[Mom's Kitchen](https://startup.benjaminpeek.com)
 
 For this deliverable, I made an HTML-only version of my application.
 
