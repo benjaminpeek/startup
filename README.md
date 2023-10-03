@@ -43,6 +43,8 @@ Here is a sketchup of how Mom's Kitchen will look to the users:
 
 ## HTML Deliverable
 
+[Mom's Kitchen] (startup.benjaminpeek.com)
+
 For this deliverable, I made an HTML-only version of my application.
 
 - **HTML Pages** For this version, I have 4 HTML pages: Home, Profile, Explore, and About. These pages will allow the user to interact with all the functionality of the website.
