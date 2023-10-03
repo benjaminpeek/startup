@@ -25,9 +25,39 @@
 
     <main>
         <h2>My Recipes: (Database Data)</h2>
+        <ul>
+            <li>Alex's Tacos</li>
+            <li>Mom's Burritos</li>
+            <li>Ellie's Breakfast Pasta</li>
+            <li>Julia's Gummy Worm Cake</li>
+        </ul>
 
+        <h2>Record New Recipe: (Database Data)</h2>
+        <form action="profile.html" method="get">
+            <label for="title">Recipe name:</label>
+            <input type="text" id="name" placeholder="recipe name" required />
 
-        <h2>Record New Recipe:</h2>
+            <label for="ingredients">Ingredients:</label>
+            <ul>
+                <input type="text" id="ingredient1" placeholder="ingredient 1" required>
+                <input type="text" id="ingredient2" placeholder="ingredient 2">
+                <input type="text" id="ingredient3" placeholder="ingredient 3">
+                <button type="button">add ingredient</button>
+            </ul>
+
+            <label for="directions">Directions:</label>
+            <ol>
+                <li><input type="text" placeholder="step 1" required></li>
+                <li><input type="text" placeholder="step 2"></li>
+                <li><input type="text" placeholder="step 2"></li>
+                <button type="button">add step</button>
+            </ol>
+
+            <button type="file" id="uploadImage" name="uploadImage" accept="image/*">Add Image(s)</button>
+            <br><br/>
+
+            <button type="submit">Submit</button>
+        </form>
 
         <h2>Rank Recent Recipes: (Database Data)(3rd party service call)</h2>
 
