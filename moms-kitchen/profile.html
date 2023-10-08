@@ -1,83 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
-</head>
-<body>
-    <header>
-        <h1><a href="index.html">Mom's Kitchen</a></h1>
-        
-        <h3><a href="https://simon.benjaminpeek.com" target="_blank">Simon HTML</a></h3>
-        <h3><a href="https://github.com/benjaminpeek/startup" target="_blank">Author's GitHub</a></h3>
-    
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="profile.html">Profile</a></li>
-                <li><a href="explore.html">Explore</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>
-        <hr />
-    </header>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Profile</title>
 
-    <main>
-        <h2>My Recipes: (Database Data)</h2>
-        <ul>
-            <li>Alex's Tacos</li>
-            <li>Mom's Burritos</li>
-            <li>Ellie's Breakfast Pasta</li>
-            <li>Julia's Gummy Worm Cake</li>
-        </ul>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+			crossorigin="anonymous"
+		/>
+	</head>
+	<body>
+		<header>
+			<h1><a href="index.html">Mom's Kitchen</a></h1>
 
-        <h2>Record New Recipe: (Database Data)</h2>
-        <form action="profile.html" method="get">
-            <label for="title">Recipe name:</label>
-            <input type="text" id="name" placeholder="recipe name" required />
+			<h3><a href="https://simon.benjaminpeek.com" target="_blank">Simon HTML</a></h3>
+			<h3><a href="https://github.com/benjaminpeek/startup" target="_blank">Author's GitHub</a></h3>
 
-            <label for="ingredients">Ingredients:</label>
-            <ul>
-                <input type="text" id="ingredient1" placeholder="ingredient 1" required>
-                <input type="text" id="ingredient2" placeholder="ingredient 2">
-                <input type="text" id="ingredient3" placeholder="ingredient 3">
-                <button type="button">add ingredient</button>
-            </ul>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="profile.html">Profile</a></li>
+					<li><a href="explore.html">Explore</a></li>
+					<li><a href="about.html">About</a></li>
+				</ul>
+			</nav>
+			<hr />
+		</header>
 
-            <label for="directions">Directions:</label>
-            <ol>
-                <li><input type="text" placeholder="step 1" required></li>
-                <li><input type="text" placeholder="step 2"></li>
-                <li><input type="text" placeholder="step 2"></li>
-                <button type="button">add step</button>
-            </ol>
+		<main>
+			<h2>My Recipes: (Database Data)</h2>
+			<ul>
+				<li>Alex's Tacos</li>
+				<li>Mom's Burritos</li>
+				<li>Ellie's Breakfast Pasta</li>
+				<li>Julia's Gummy Worm Cake</li>
+			</ul>
 
-            <button type="file" id="uploadImage" name="uploadImage" accept="image/*">Add Image(s)</button>
-            <br><br/>
+			<hr />
 
-            <button type="submit">Submit</button>
-        </form>
+			<h2>Record New Recipe: (Database Data)</h2>
+			<form action="profile.html" method="get">
+				<label for="title">Recipe name:</label>
+				<input type="text" id="name" placeholder="recipe name" required />
 
-        <h2>Rate Recent Recipes: (Database Data)(3rd party service call)</h2>
-        <ol>
-            <li>Alex's Tacos <button>rate</button></li>
-            <li>Mom's Burritos <button>rate</button></li>
-            <li>Ellie's Breakfast Pasta <button>rate</button></li>
-            <li>Julia's Gummy Worm Cake <button>rate</button></li>
-        </ol>
+				<label for="ingredients">Ingredients:</label>
+				<ul>
+					<input type="text" id="ingredient1" placeholder="ingredient 1" required />
+					<input type="text" id="ingredient2" placeholder="ingredient 2" />
+					<input type="text" id="ingredient3" placeholder="ingredient 3" />
+					<button type="button">add ingredient</button>
+				</ul>
 
-        <h2>Followed Cooks: (Database Data)</h2>
-        <ul>
-            <li><button>Bob Cookman</button></li>
-            <li><button>Lisa Chefington</button></li>
-            <li><button>Charlene Crembruly</button></li>
-            <li><button>Lucas Lasagna</button></li>
-        </ul>
+				<label for="directions">Directions:</label>
+				<ol>
+					<li><input type="text" placeholder="step 1" required /></li>
+					<li><input type="text" placeholder="step 2" /></li>
+					<li><input type="text" placeholder="step 2" /></li>
+					<button type="button">add step</button>
+				</ol>
 
-        <hr />
-    </main>
-    
-    <footer></footer>
-</body>
+				<button type="file" id="uploadImage" name="uploadImage" accept="image/*">Add Image(s)</button>
+				<br /><br />
+
+				<button type="submit">Submit</button>
+			</form>
+
+			<hr />
+
+			<h2>Rate Recent Recipes: (Database Data)(3rd party service call)</h2>
+			<ol>
+				<li>Alex's Tacos <button>rate</button></li>
+				<li>Mom's Burritos <button>rate</button></li>
+				<li>Ellie's Breakfast Pasta <button>rate</button></li>
+				<li>Julia's Gummy Worm Cake <button>rate</button></li>
+			</ol>
+
+			<hr />
+
+			<h2>Followed Cooks: (Database Data)</h2>
+			<ul>
+				<li><button>Bob Cookman</button></li>
+				<li><button>Lisa Chefington</button></li>
+				<li><button>Charlene Crembruly</button></li>
+				<li><button>Lucas Lasagna</button></li>
+			</ul>
+
+			<hr />
+		</main>
+
+		<footer></footer>
+	</body>
 </html>
