@@ -27,3 +27,4 @@ For this deliverable, I made a few edits on the Simon CSS page given to us.
 - **Changed picture on About page** Changed it to an abstract painting I found online, copyright free.
 - **Changed Home page to reflect the site was modified by me**
 - **Changed the color of the border of picture on About page to aquamarine**
+- **Changed table header color on Scores page to white**
