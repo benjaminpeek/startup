@@ -8,4 +8,3 @@ nav :nth-child(1)::after {
     bottom: -4px;
     opacity: 1;
 }
-
