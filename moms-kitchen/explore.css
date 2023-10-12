@@ -1,0 +1,10 @@
+nav :nth-child(3)::after {
+    content: '';
+    height: 4px;
+    width: 100%;
+    background-color: #dd91ff;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    opacity: 1;
+}

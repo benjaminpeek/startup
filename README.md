@@ -56,3 +56,21 @@ For this deliverable, I made an HTML-only version of my application.
 - **Login Placeholder** On the Home page, there is a placeholder for a login form.
 - **Database Data Placeholder** On the Profile page, there is a placeholder for database data in the recipe sections
 - **WebSocket Data Placeholder** On the Explore page, added the placeholders for information on most popular recipes and home cooks.
+
+## CSS Deliverable
+
+[Mom's Kitchen - CSS](https://startup.benjaminpeek.com)
+
+For this deliverable, I added CSS to my HTML-only website to give it a lot more character and visual appeal!
+
+-**Header, footer, and main content body** Added a logo and stylized the navigation links. Also used Flexbox to make them adjust to screen size.
+
+-**Navigation elements**
+
+-**Responsive to window resizing**
+
+-**Application elements**
+
+-**Application text content**
+
+-**Application images**
