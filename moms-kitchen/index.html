@@ -9,7 +9,7 @@
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Onest:wght@600;700&family=Young+Serif&display=swap" rel="stylesheet" />
 
 		<link rel="stylesheet" href="main.css" />
 		<link rel="stylesheet" href="index.css" />
@@ -35,26 +35,44 @@
 		</header>
 
 		<main>
-			<img
-				src="https://images.unsplash.com/photo-1556910096-6f5e72db6803?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8
-                fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
-				alt="banner"
-				width="500"
-			/>
+			<div class="landing-intro">
+				<p>Share your favorite family recipes with other home cooks.</p>
+			</div>
 
-			<h2>Login: (Authentication)(3rd party service call)</h2>
-			<form method="get" action="profile.html">
-				<label for="email">Email:</label>
-				<input type="email" id="email" placeholder="email address" />
-				<label for="password">Password:</label>
-				<input type="password" id="password" placeholder="password" />
-				<button type="submit">Login</button>
-			</form>
-			<h3>
-				<button><a href="profile.html">Sign in with Google</a></button> (Authentication)(3rd party service call)
-			</h3>
+			<div class="login-container">
+				<h2>Join the fun</h2>
+				<form>
+					<input type="email" placeholder="Email" name="email" required />
+					<input type="password" placeholder="Password" name="password" required />
+					<button type="submit">Login</button>
+				</form>
 
-			<hr />
+				<div class="login-options-wrapper">
+					<button class="forgot-btn">Forgot Password?</button>
+					<button class="google-login">
+						Login with Google (
+						<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 488 512">
+							<!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+							<style>
+								svg {
+									fill: #ffffff;
+								}
+							</style>
+							<path
+								d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"
+							/>
+						</svg>
+						)
+					</button>
+				</div>
+				<hr />
+				<div class="signup-txt">
+					<h4>Haven't joined yet?</h4>
+				</div>
+				<div class="signup-btn">
+					<button>Sign Up!</button>
+				</div>
+			</div>
 		</main>
 
 		<footer>

@@ -63,7 +63,7 @@ For this deliverable, I made an HTML-only version of my application.
 
 For this deliverable, I added CSS to my HTML-only website to give it a lot more character and visual appeal!
 
--**Header, footer, and main content body** Added a logo and stylized the navigation links. Also used Flexbox to make them adjust to screen size.
+-**Header, footer, and main content body** Added a logo and stylized the navigation links. Adjusted the header to use Flexbox.
 
 -**Navigation elements**
 
