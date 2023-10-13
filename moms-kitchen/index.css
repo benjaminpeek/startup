@@ -13,7 +13,7 @@ main {
     display: flex;
     flex-direction: column;
     place-items: center;
-    padding-top: 150px;
+    padding-top: 125px;
     padding-bottom: 200px;
     color: white;
     background-color: #707070;
@@ -48,8 +48,9 @@ main {
   .login-container h2 {
     text-align: center;
     margin-bottom: 20px;
+    font-family: 'Onest', sans-serif;
     font-size: 2.5em;
-    font-weight: 600;
+    font-weight: 400;
     border-bottom: 4px solid #dd91ff;
   }
 

@@ -8,3 +8,14 @@ nav :nth-child(2)::after {
     bottom: -4px;
     opacity: 1;
 }
+
+main {
+    font-family: 'Onest', sans-serif;
+    font-weight: lighter;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+h2 {
+    font-family: 'Young Serif', serif;
+}
