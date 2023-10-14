@@ -37,12 +37,52 @@
 		<main>
 			<div class="my-recipes-container">
 				<h2>My Recipes:</h2>
-				<ul>
-					<li>Alex's Tacos</li>
-					<li>Mom's Burritos</li>
-					<li>Ellie's Breakfast Pasta</li>
-					<li>Julia's Gummy Worm Cake</li>
-				</ul>
+				<div class="recipe-card-container">
+					<div class="recipe-card">
+						<div class="recipe-name">
+							<p>Alex's Grilled Cheese</p>
+						</div>
+						<img src="images/pixzolo-photography-BiWb1Y8wpZk-unsplash-(1).jpg" alt="recipe1-img" class="recipe-image" />
+						<ul class="recipe-ingredients">
+							<li>2 slices of white bread</li>
+							<li>4 slices of sharp cheddar</li>
+							<li>Sea salt and ground pepper</li>
+						</ul>
+					</div>
+					<div class="recipe-card">
+						<div class="recipe-name">
+							<p>Julia's Summer Salad</p>
+						</div>
+						<img src="images/dovile-ramoskaite-xX9SmqQCbFY-unsplash-1.jpg" alt="recipe1-img" class="recipe-image" />
+						<ul class="recipe-ingredients">
+							<li>12 strawberries</li>
+							<li>2 tbsp Olive Oil</li>
+							<li>1 head of lettuce</li>
+						</ul>
+					</div>
+					<div class="recipe-card">
+						<div class="recipe-name">
+							<p>Ellie's Sausage Pasta</p>
+						</div>
+						<img src="images/karolina-kolodziejczak-96_CGkcHmNQ-unsplash-(1).jpg" alt="recipe1-img" class="recipe-image" />
+						<ul class="recipe-ingredients">
+							<li>1 box of pasta</li>
+							<li>1 full summer sausage</li>
+							<li>2 cans of tomato sauce</li>
+						</ul>
+					</div>
+					<div class="recipe-card">
+						<div class="recipe-name">
+							<p>Mom's Crackerbarel Chicken</p>
+						</div>
+						<img src="images/aly-0dW1rNcbadM-unsplash-(1).jpg" alt="recipe1-img" class="recipe-image" />
+						<ul class="recipe-ingredients">
+							<li>2 pounds of chicken</li>
+							<li>4 cups of Italian dressing</li>
+							<li>1 cup of lemon juice</li>
+						</ul>
+					</div>
+				</div>
 			</div>
 
 			<hr />
@@ -50,27 +90,37 @@
 			<div class="record-new-recipe-container">
 				<h2>Record New Recipe:</h2>
 				<form action="profile.html" method="get">
-					<label for="title">Recipe name:</label>
+					<label for="title">Recipe name</label>
 					<input type="text" id="name" placeholder="recipe name" required />
 
-					<label for="ingredients">Ingredients:</label>
-					<ul>
-						<input type="text" id="ingredient1" placeholder="ingredient 1" required />
-						<input type="text" id="ingredient2" placeholder="ingredient 2" />
-						<input type="text" id="ingredient3" placeholder="ingredient 3" />
-						<button type="button">add ingredient</button>
-					</ul>
+					<div class="ingredients-wrapper">
+						<label for="ingredients">Ingredients</label>
+						<ul>
+							<li>
+								<input type="text" id="ingredient1" placeholder="ingredient 1" required />
+							</li>
+							<li>
+								<input type="text" id="ingredient2" placeholder="ingredient 2" />
+							</li>
+							<li>
+								<input type="text" id="ingredient3" placeholder="ingredient 3" />
+							</li>
 
-					<label for="directions">Directions:</label>
-					<ol>
-						<li><input type="text" placeholder="step 1" required /></li>
-						<li><input type="text" placeholder="step 2" /></li>
-						<li><input type="text" placeholder="step 2" /></li>
-						<button type="button">add step</button>
-					</ol>
+							<button type="button">add ingredient</button>
+						</ul>
+					</div>
+
+					<div class="directions-wrapper">
+						<label for="directions">Directions</label>
+						<ol>
+							<li><input type="text" placeholder="step 1" required /></li>
+							<li><input type="text" placeholder="step 2" /></li>
+							<li><input type="text" placeholder="step 2" /></li>
+							<button type="button">add step</button>
+						</ol>
+					</div>
 
 					<button type="file" id="uploadImage" name="uploadImage" accept="image/*">Add Image(s)</button>
-					<br /><br />
 
 					<button type="submit">Add Recipe</button>
 				</form>
@@ -80,24 +130,30 @@
 
 			<div class="rate-recent-recipes-container">
 				<h2>Rate Recent Recipes:</h2>
-				<ol>
-					<li>Alex's Tacos <button>rate</button></li>
-					<li>Mom's Burritos <button>rate</button></li>
-					<li>Ellie's Breakfast Pasta <button>rate</button></li>
-					<li>Julia's Gummy Worm Cake <button>rate</button></li>
-				</ol>
+				<div class="rated-recipes-container">
+					<li>Alex's Grilled Cheese <button>rate</button></li>
+					<li>Julia's Summer Salad <button>rate</button></li>
+					<li>Ellie's Sausage Pasta <button>rate</button></li>
+					<li>Mom's Crackerbarel Chicken <button>rate</button></li>
+				</div>
 			</div>
 
 			<hr />
 
 			<div class="followed-cooks-container">
 				<h2>Followed Cooks:</h2>
-				<ul>
-					<li><button>Bob Cookman</button></li>
-					<li><button>Lisa Chefington</button></li>
-					<li><button>Charlene Crembruly</button></li>
-					<li><button>Lucas Lasagna</button></li>
-				</ul>
+				<div class="cook-card">
+					<p>Bob Cookman</p>
+				</div>
+				<div class="cook-card">
+					<p>Lisa Chefington</p>
+				</div>
+				<div class="cook-card">
+					<p>Charlene Crembruly</p>
+				</div>
+				<div class="cook-card">
+					<p>Lucas Lasagna</p>
+				</div>
 			</div>
 		</main>
 

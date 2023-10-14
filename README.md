@@ -65,12 +65,12 @@ For this deliverable, I added CSS to my HTML-only website to give it a lot more 
 
 -**Header, footer, and main content body** Added a logo and stylized the navigation links. Adjusted the header to use Flexbox.
 
--**Navigation elements**
+-**Navigation elements** Added a working navigation bar and styled it with CSS rules and Flexbox.
 
--**Responsive to window resizing**
+-**Responsive to window resizing** The page scales with the viewport to keep everything on the screen in a flexible way.
 
--**Application elements**
+-**Application elements** I have a login form, a profile page, an explore page, and an about page.
 
--**Application text content**
+-**Application text content** I have text content that includes an intro on the Homepage, recipe details in the Profile section, recipe descriptions in the Explore page, and an About section explaining the site.
 
--**Application images**
+-**Application images** I have pictures for the recipes and on the homepage.

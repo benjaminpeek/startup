@@ -11,11 +11,155 @@ nav :nth-child(2)::after {
 
 main {
     font-family: 'Onest', sans-serif;
+    font-size: 1.25em;
     font-weight: lighter;
-    margin-left: 20px;
-    margin-right: 20px;
 }
 
 h2 {
     font-family: 'Young Serif', serif;
+    text-decoration: underline;
+}
+
+main hr {
+    border-top: 4px solid #dd91ff;
+}
+
+.my-recipes-container {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.recipe-card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.recipe-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* background-color: rgb(244, 244, 244); */
+    background-color: #faefff;
+    border-radius: 10px;
+    padding: 10px;
+    padding-bottom: 0px;
+    width: 350px;
+}
+
+.recipe-card .recipe-name {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    font-family: 'Young Serif';
+    font-size: 1.25em;
+    padding-left: 10px;
+    border-radius: 10px;
+}
+
+.recipe-card .recipe-name p {
+    margin: 0;
+}
+
+.recipe-card img {
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.recipe-card .recipe-ingredients {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    margin-top: -15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.recipe-card ul {
+    background-color: white;
+    border-radius: 10px;
+}
+
+.record-new-recipe-container {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.rate-recent-recipes-container {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.followed-cooks-container {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.record-new-recipe-container {
+    display: flex;
+    flex-direction: column;
+    width: clamp(80%, 40%, 80%);
+}
+
+.record-new-recipe-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #faefff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.record-new-recipe-container label {
+    background-color: white;
+    font-family: 'Young Serif', serif;
+    font-size: 1.25em;
+    padding: 2px;
+    border-radius: 10px;
+    width: fit-content;
+}
+
+.record-new-recipe-container input {
+    width: clamp(30%, 40%, 50%);
+}
+
+.record-new-recipe-container button {
+    width: 40%;
+}
+
+.rate-recent-recipes-container {
+    display: flex;
+    flex-direction: column;
+    width: clamp(40%, 40%, 50%);
+}
+
+.rated-recipes-container {
+    background-color: #faefff;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.rated-recipes-container li {
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5px;
+    border-bottom: 2px solid white;
+}
+
+.followed-cooks-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }

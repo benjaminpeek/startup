@@ -7,6 +7,10 @@ main {
     padding-top: 10px;
 }
 
+main hr {
+    border-top: 4px solid #dd91ff;
+}
+
 h2 {
     font-family: 'Young Serif', serif;
 }
@@ -70,6 +74,7 @@ footer {
     background-color: #707070;
     padding-top: 20px;
     padding-bottom: 20px;
+    border-top: 3px solid black;
 }
 
 footer a {
