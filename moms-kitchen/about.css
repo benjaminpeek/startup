@@ -8,3 +8,33 @@ nav :nth-child(4)::after {
     bottom: -4px;
     opacity: 1;
 }
+
+main {
+    font-family: 'Onest', sans-serif;
+    font-size: 1.25em;
+    font-weight: 400;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+h2 {
+    font-family: 'Young Serif', serif;
+    text-decoration: underline;
+}
+
+main hr {
+    border-top: 4px solid #dd91ff;
+}
+
+.mission-txt-img {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-right: 20%;
+}
+
+.mission-txt-img img {
+    max-width: 500px;
+    min-width: 500px;
+}
