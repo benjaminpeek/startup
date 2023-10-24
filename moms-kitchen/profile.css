@@ -24,7 +24,7 @@ main hr {
     border-top: 4px solid #dd91ff;
 }
 
-.welcome-message {
+#welcome-message {
     margin-left: 20px;
 }
 
