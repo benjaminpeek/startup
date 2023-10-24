@@ -81,6 +81,6 @@ For this deliverable, I added CSS to my HTML-only website to give it a lot more 
 
 For this deliverable, I added functionality to my website with JavaScript!
 -**Login Support** Added some functionality to the login form on the homepage of my website, takes user to their profile and remembers their name in local storage.
--**Database Support**
+-**Database Support** Users will be able to store their own recipes on their Profile, and look at other cooks and their recipes. For now, these are done with localStorage through JavaScript, like adding more recipes to your profile.
 -**WebSocket Support**
 -**Interaction Logic** Made it so the user's Profile page welcomes them back by their first name and does not display their profile features until they have logged in locally on the Home page.

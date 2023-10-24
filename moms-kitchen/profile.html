@@ -40,13 +40,13 @@
 
 			<div class="my-recipes-container">
 				<h2>My Recipes:</h2>
-				<!-- recipe cards -->
+				<!-- recipe cards container -->
 				<div class="recipe-card-container">
 					<div class="recipe-card">
 						<div class="recipe-name">
-							<p>Alex's Grilled Cheese</p>
+							<p id="recipe-name">Alex's Grilled Cheese</p>
 						</div>
-						<img src="images/pixzolo-photography-BiWb1Y8wpZk-unsplash-(1).jpg" alt="recipe1-img" class="recipe-image" />
+						<img id="recipe-img" src="images/pixzolo-photography-BiWb1Y8wpZk-unsplash-(1).jpg" alt="recipe1-img" class="recipe-image" />
 						<ul class="recipe-ingredients">
 							<li>2 slices of white bread</li>
 							<li>4 slices of sharp cheddar</li>
@@ -55,9 +55,9 @@
 					</div>
 					<div class="recipe-card">
 						<div class="recipe-name">
-							<p>Julia's Summer Salad</p>
+							<p id="recipe-name">Julia's Summer Salad</p>
 						</div>
-						<img src="images/dovile-ramoskaite-xX9SmqQCbFY-unsplash-1.jpg" alt="recipe1-img" class="recipe-image" />
+						<img id="recipe-img" src="images/dovile-ramoskaite-xX9SmqQCbFY-unsplash-1.jpg" alt="recipe-img" class="recipe-image" />
 						<ul class="recipe-ingredients">
 							<li>12 strawberries</li>
 							<li>2 tbsp Olive Oil</li>
@@ -66,9 +66,9 @@
 					</div>
 					<div class="recipe-card">
 						<div class="recipe-name">
-							<p>Ellie's Sausage Pasta</p>
+							<p id="recipe-name">Ellie's Sausage Pasta</p>
 						</div>
-						<img src="images/karolina-kolodziejczak-96_CGkcHmNQ-unsplash-(1).jpg" alt="recipe1-img" class="recipe-image" />
+						<img id="recipe-img" src="images/karolina-kolodziejczak-96_CGkcHmNQ-unsplash-(1).jpg" alt="recipe-img" class="recipe-image" />
 						<ul class="recipe-ingredients">
 							<li>1 box of pasta</li>
 							<li>1 full summer sausage</li>
@@ -77,9 +77,9 @@
 					</div>
 					<div class="recipe-card">
 						<div class="recipe-name">
-							<p>Mom's Crackerbarel Chicken</p>
+							<p id="recipe-name">Mom's Crackerbarel Chicken</p>
 						</div>
-						<img src="images/aly-0dW1rNcbadM-unsplash-(1).jpg" alt="recipe1-img" class="recipe-image" />
+						<img id="recipe-img" src="images/aly-0dW1rNcbadM-unsplash-(1).jpg" alt="recipe1-img" class="recipe-image" />
 						<ul class="recipe-ingredients">
 							<li>2 pounds of chicken</li>
 							<li>4 cups of Italian dressing</li>
@@ -110,7 +110,7 @@
 								<input type="text" id="ingredient3" placeholder="ingredient 3" />
 							</li>
 
-							<button type="button">add ingredient</button>
+							<button onclick="addIngredient()" type="button">add ingredient</button>
 						</ul>
 					</div>
 
