@@ -80,7 +80,7 @@ For this deliverable, I added CSS to my HTML-only website to give it a lot more 
 [Mom's Kitchen - CSS](https://startup.benjaminpeek.com)
 
 For this deliverable, I added functionality to my website with JavaScript!
--**Login Support** Added some functionality to the login form on the homepage of my website.
+-**Login Support** Added some functionality to the login form on the homepage of my website, takes user to their profile and remembers their name in local storage.
 -**Database Support**
 -**WebSocket Support**
 -**Interaction Logic** Made it so the user's Profile page welcomes them back by their first name and does not display their profile features until they have logged in locally on the Home page.
