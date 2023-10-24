@@ -24,6 +24,10 @@ main hr {
     border-top: 4px solid #dd91ff;
 }
 
+.welcome-message {
+    margin-left: 20px;
+}
+
 .my-recipes-container {
     margin-left: 20px;
     margin-right: 20px;
@@ -44,7 +48,6 @@ main hr {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    /* background-color: rgb(244, 244, 244); */
     background-color: #faefff;
     border-radius: 10px;
     padding: 10px;

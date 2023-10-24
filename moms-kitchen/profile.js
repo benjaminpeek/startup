@@ -1,0 +1,1 @@
+document.getElementById("welcome-message").textContent = "Welcome back, " + localStorage.getItem(userName) + "!";

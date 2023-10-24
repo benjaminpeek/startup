@@ -41,8 +41,11 @@
 
 			<div class="login-container">
 				<h2>Join the fun</h2>
-				<form>
-					<input type="email" placeholder="Email" name="email" required />
+				<!-- login form -->
+				<form id="login-form">
+					<input type="email" placeholder="Email Address" name="email" required />
+					<input type="text" placeholder="First Name" name="fname" id="userFirstName" required />
+					<input type="text" placeholder="Last Name" name="lname" required />
 					<input type="password" placeholder="Password" name="password" required />
 					<button type="submit">Login</button>
 				</form>
@@ -79,5 +82,7 @@
 			<a href="https://simon.benjaminpeek.com" target="_blank">Simon CSS</a>
 			<a href="https://github.com/benjaminpeek/startup" target="_blank">Author's GitHub</a>
 		</footer>
+
+		<script src="login.js"></script>
 	</body>
 </html>

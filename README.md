@@ -74,3 +74,13 @@ For this deliverable, I added CSS to my HTML-only website to give it a lot more 
 -**Application text content** I have text content that includes an intro on the Homepage, recipe details in the Profile section, recipe descriptions in the Explore page, and an About section explaining the site.
 
 -**Application images** I have pictures for the recipes and on the homepage.
+
+## JavaScript Deliverable
+
+[Mom's Kitchen - CSS](https://startup.benjaminpeek.com)
+
+For this deliverable, I added functionality to my website with JavaScript!
+-**Login Support** Added some functionality to the login form on the homepage of my website.
+-**Database Support**
+-**WebSocket Support**
+-**Interaction Logic**
