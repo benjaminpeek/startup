@@ -1,5 +1,4 @@
 const loginForm = document.getElementById("login-form");
-sessionStorage.setItem("loggedIn", false);
 
 loginForm.addEventListener("submit", e => {
     if (loginForm.checkValidity()) {
@@ -17,5 +16,5 @@ function login() {
     const name = document.querySelector("#userFirstName");
     localStorage.setItem("userName", name.value);
     window.location.href = "profile.html";
-    sessionStorage.setItem("loggedIn", true);
+    localStorage.setItem("loggedIn", true);
 }

@@ -83,4 +83,4 @@ For this deliverable, I added functionality to my website with JavaScript!
 -**Login Support** Added some functionality to the login form on the homepage of my website.
 -**Database Support**
 -**WebSocket Support**
--**Interaction Logic**
+-**Interaction Logic** Made it so the user's Profile page welcomes them back by their first name and does not display their profile features until they have logged in locally on the Home page.
