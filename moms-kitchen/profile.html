@@ -94,23 +94,23 @@
 			<div class="record-new-recipe-container">
 				<h2>Record New Recipe:</h2>
 				<form action="profile.html" method="get">
-					<label for="title">Recipe name</label>
-					<input type="text" id="name" placeholder="recipe name" required />
+					<label for="title">Recipe name:</label>
+					<input type="text" id="name" placeholder="recipe name" maxlength="50" required />
 
 					<div class="ingredients-wrapper">
-						<label for="ingredients">Ingredients</label>
+						<label for="ingredients">Ingredients:</label>
 						<ul id="ingredient-list">
 							<li>
-								<input type="text" id="ingredient1" placeholder="ingredient 1" required />
+								<input type="text" class="ingredient" placeholder="ingredient 1" required />
 							</li>
 							<li>
-								<input type="text" id="ingredient2" placeholder="ingredient 2" />
+								<input type="text" class="ingredient" placeholder="ingredient 2" />
 							</li>
 							<li>
-								<input type="text" id="ingredient3" placeholder="ingredient 3" />
+								<input type="text" class="ingredient" placeholder="ingredient 3" />
 							</li>
 
-							<button onclick="addIngredient()" type="button">add ingredient</button>
+							<button id="add-ingredient-btn" onclick="addIngredient()" type="button">add ingredient</button>
 						</ul>
 					</div>
 
@@ -124,9 +124,11 @@
 						</ol>
 					</div> -->
 
-					<button type="file" id="uploadImage" name="uploadImage" accept="image/*">Add Image</button>
+					<label for="image">Add Image:</label>
+					<input type="file" id="uploadImage" name="uploadImage" accept="image/*" />
 
-					<button type="submit">Add Recipe</button>
+					<label for="done">Add it to your cookbook:</label>
+					<button type="submit" onsubmit="addRecipe()">Add Recipe</button>
 				</form>
 			</div>
 

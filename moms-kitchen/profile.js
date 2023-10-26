@@ -1,6 +1,6 @@
 "use strict";
 
-let ingredientCount = 0;
+let potentialIngredientCount = 3;
 
 if (localStorage.getItem('loggedIn') === 'true') {
     document.getElementById("welcome-message").textContent = "Welcome back, " + localStorage.getItem('userName') + "!";
@@ -10,7 +10,13 @@ else {
     document.getElementById("welcome-message").textContent = "Please login on the Home page to use these features.";
 }
 
-// take the input data from the add recipe form, and make a new recipe card from it
 function addIngredient() {
-    console.log("Ingredient added!");
+    potentialIngredientCount++;
+    let newIngredient = document.createElement('li');
+    newIngredient.innerHTML = `<input type='text' class='ingredient' placeholder='ingredient ${potentialIngredientCount}' />`;
+    document.getElementById("ingredient-list").insertBefore(newIngredient, document.getElementById("add-ingredient-btn"));
+}
+
+function addRecipe() {
+    console.log("Recipe added");
 }
