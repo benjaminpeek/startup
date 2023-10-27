@@ -13,7 +13,6 @@ loginForm.addEventListener("submit", e => {
     }
 });
 
-
 function login() {
     const name = document.querySelector("#userFirstName");
     localStorage.setItem("userName", name.value);
