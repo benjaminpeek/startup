@@ -12,19 +12,19 @@ if (localStorage.getItem('loggedIn') === 'true') {
     document.getElementById("profile-styles").href = 'profile.css';
 
     // display the user's recipes
-    if (localStorage.getItem("hasRecipes") === 'true') {
-        console.log("user has recipes");
-        for (let i = 1; i <= localStorage.getItem("numOfUserRecipes"); i++) {
-            // append the user recipe element items
-            // get the recipe card element from local storage string object
-            let currRecipeCard = JSON.parse(localStorage.getItem(`userRecipe${i}`));
-            document.querySelector("#recipe-card-container").appendChild(currRecipeCard);
-        }
-    }   
-}
-else {
+    // if (localStorage.getItem("hasRecipes") === 'true') {
+    //     console.log("user has recipes");
+    //     for (let i = 1; i <= localStorage.getItem("numOfUserRecipes"); i++) {
+    //         // append the user recipe element items
+    //         // get the recipe card element from local storage string object
+    //         let currRecipeCard = JSON.parse(localStorage.getItem(`userRecipe${i}`));
+    //         // document.querySelector("#recipe-card-container").appendChild(currRecipeCard);
+    //     }
+    // }   
+} else {
     document.getElementById("welcome-message").textContent = "Please login on the Home page to use these features.";
 }
+
 
 function addIngredient() {
     potentialIngredientCount++;
@@ -60,6 +60,7 @@ uploadImageEl.addEventListener("change", function() {
     reader.readAsDataURL(this.files[0]);
 });
 
+
 function addRecipe() {
     // get the recipe name and make the div for it
     let recipeNameDiv = document.createElement("div");
@@ -72,7 +73,6 @@ function addRecipe() {
     recipeImageEl.setAttribute("class", "recipe-image");
     recipeImageEl.setAttribute("src", localStorage.getItem("recipeImage"));
     let recipeImageElHTML = recipeImageEl.outerHTML;
-
 
     // save all of the ingredients into a list
     for (let i = 1; i <= potentialIngredientCount; i++) {
@@ -101,9 +101,14 @@ function addRecipe() {
 
     localStorage.setItem("hasRecipes", true);
     
-    localStorage.setItem("numOfUserRecipes", localStorage.getItem("numOfUserRecipes") + 1);
+    localStorage.setItem("numOfUserRecipes", parseInt(localStorage.getItem("numOfUserRecipes")) + 1);
+    console.log(typeof newRecipeCard);
     localStorage.setItem(`userRecipe${localStorage.getItem("numOfUserRecipes")}`, JSON.stringify(newRecipeCard));
+    console.log(localStorage.getItem(`userRecipe${localStorage.getItem("numOfUserRecipes")}`));
 
     // refresh page
-    window.location.href = "profile.html";
+    // window.location.href = "profile.html";
+    window.scrollTo(0, 0);
+    recipeForm.reset();
+    document.getElementById("ingredient-list").innerHTML = "<li><input id='ingredient1' type='text' placeholder='ingredient 1' required /></li><li><input id='ingredient2' type='text' placeholder='ingredient 2' required /></li><li><input id='ingredient3' type='text' placeholder='ingredient 3' required /></li><button id='add-ingredient-btn' onclick='addIngredient()' type='button'>add ingredient</button>"
 }
