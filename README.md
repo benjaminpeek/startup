@@ -81,6 +81,9 @@ For this deliverable, I added CSS to my HTML-only website to give it a lot more 
 
 For this deliverable, I added functionality to my website with JavaScript!
 -**Login Support** Added some functionality to the login form on the homepage of my website, takes user to their profile and remembers their name in local storage.
+
 -**Database Support** Users will be able to store their own recipes on their Profile, and look at other cooks and their recipes. For now, these are done with localStorage in JavaScript, like adding more recipes to your profile.
+
 -**WebSocket Support** The user will be able to see popular recipes from the internet in the "Popular Recipes This Week" section using a recipe API on the Explore page.
+
 -**Interaction Logic** Made it so the user's Profile page welcomes them back by their first name and does not display their profile features until they have logged in locally on the Home page. Added the ability to add multiple ingredients to recipe and submit an image of it. Added the ability to create a new recipe and add it to the user's Profile. The user is able to successfully add recipes to their list on their Profile, but right now it gets deleted because we are not yet using a Database to hold the recipes the user creates.
