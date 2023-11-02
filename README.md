@@ -77,7 +77,7 @@ For this deliverable, I added CSS to my HTML-only website to give it a lot more 
 
 ## JavaScript Deliverable
 
-[Mom's Kitchen - CSS](https://startup.benjaminpeek.com)
+[Mom's Kitchen - JavaScript](https://startup.benjaminpeek.com)
 
 For this deliverable, I added functionality to my website with JavaScript!
 -**Login Support** Added some functionality to the login form on the homepage of my website, takes user to their profile and remembers their name in local storage.
