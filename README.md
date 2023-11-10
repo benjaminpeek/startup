@@ -87,3 +87,18 @@ For this deliverable, I added functionality to my website with JavaScript!
 -**WebSocket Support** The user will be able to see popular recipes from the internet in the "Popular Recipes This Week" section using a recipe API on the Explore page.
 
 -**Interaction Logic** Made it so the user's Profile page welcomes them back by their first name and does not display their profile features until they have logged in locally on the Home page. Added the ability to add multiple ingredients to recipe and submit an image of it. Added the ability to create a new recipe and add it to the user's Profile. The user is able to successfully add recipes to their list on their Profile, but right now it gets deleted because we are not yet using a Database to hold the recipes the user creates.
+
+## Service Deliverable
+
+[Mom's Kitchen - JavaScript](https://startup.benjaminpeek.com)
+
+For this deliverable, I added WebSerive support to my website with Node.js and Express.
+-**HTTP Service with Node.js and Express** 
+
+-**Frontend served up with express static middleware**
+
+-**Third party service endpoints**
+
+-**Provided backend service endpoints**
+
+-**Frontend calling service endpoints**
