@@ -111,6 +111,6 @@ function addRecipe() {
     window.scrollTo(0, 0);
     recipeForm.reset();
     ingredientList = [];
-    document.getElementById("ingredient-list").innerHTML = "<li><input id='ingredient1' type='text' placeholder='ingredient 1' required /></li><li><input id='ingredient2' type='text' placeholder='ingredient 2' /></li><li><input id='ingredient3' type='text' placeholder='ingredient 3' /></li><button id='add-ingredient-btn' onclick='addIngredient()' type='button'>add ingredient</button>"
+    document.getElementById("ingredient-list").innerHTML = "<li><input id='ingredient1' type='text' placeholder='ingredient 1' required /></li><li><input id='ingredient2' type='text' placeholder='ingredient 2' /></li><li><input id='ingredient3' type='text' placeholder='ingredient 3' /></li><button id='add-ingredient-btn' onclick='addIngredient()' type='button'>add ingredient</button>";
     localStorage.removeItem("recipeImage");
 }
