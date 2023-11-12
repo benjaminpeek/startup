@@ -1,4 +1,5 @@
 
+const apiKey = 'cae36e9082b6471083846f8858646adf';
 function displayRecipes() {
   fetch(`https://api.spoonacular.com/recipes/random?number=4&apiKey=${apiKey}`)
     .then((response) => response.json())
