@@ -2,8 +2,7 @@ console.log(apiKey);
 
   function displayRecipes() {
     const random = Math.floor(Math.random() * 1000);
-    fetch(`https://picsum.photos/v2/list?page=${random}&limit=1`)
-    // fetch(`https://api.spoonacular.com/recipes/random?number=4&apiKey=${apiKey}`)
+    fetch(`https://api.spoonacular.com/recipes/random?number=4&apiKey=${apiKey}`)
       .then((response) => response.json())
       .then((data) => {
         let recipe1 = data.recipes[0]
