@@ -1,21 +1,5 @@
 "use strict";
 
-// given in data services
-const config = require('../dbConfig.json');
-
-const url = `mongodb+srv://${config.userName}:${config.password}@${config.hostname}`;
-const client = new MongoClient(url);
-const db = client.db('rental');
-
-(async function testConnection() {
-  await client.connect();
-  await db.command({ ping: 1 });
-})().catch((ex) => {
-  console.log(`Unable to connect to database with ${url} because ${ex.message}`);
-  process.exit(1);
-});
-
-
 let potentialIngredientCount = 3;
 let ingredientList = [];
 let clearRecipesPressed = false;
@@ -45,8 +29,6 @@ function displayRecipes() {
                 console.log(currRecipeHTML);
 
                 document.querySelector("#recipe-card-container").insertAdjacentHTML("beforeend", currRecipeHTML);
-
-                // document.querySelector("#recipe-card-container").appendChild(currRecipeCard);
             }
         }   
     } else {
@@ -90,7 +72,7 @@ uploadImageEl.addEventListener("change", function() {
 });
 
 
-function addRecipe() {
+async function addRecipe() {
     // get the recipe name and make the div for it
     let recipeNameDiv = document.createElement("div");
     recipeNameDiv.setAttribute("class", "recipe-name");
@@ -120,20 +102,35 @@ function addRecipe() {
     let newRecipeIngredientsHTML = newRecipeIngredients.outerHTML;
     
     // make a new recipe card
-    let newRecipeCard = document.createElement("div");
+    let newRecipeCard_OLD = document.createElement("div");
     newRecipeCard.setAttribute("class", "recipe-card");
     // put it all together
-    newRecipeCard.innerHTML = recipeNameDivHTML + recipeImageHTML + newRecipeIngredientsHTML;
+    newRecipeCard_OLD.innerHTML = recipeNameDivHTML + recipeImageHTML + newRecipeIngredientsHTML;
 
-    // put it into the collection of the user's recipes
-    // document.querySelector("#recipe-card-container").appendChild(newRecipeCard);
+    let newRecipeCard = {
+        recipeName: recipeNameDivHTML,
+        recipeImage: recipeImageHTML,
+        recipeIngredients: newRecipeIngredientsHTML,
+        userEmail: localStorage.getItem("userEmail")
+    }
+
+    try {
+        const response = await fetch('/api/score', {
+            method: 'POST',
+            headers: {'content-type': 'application/json'},
+            body: JSON.stringify(newRecipeCard),
+          });
+    } catch {
+        // If there was an error then just track scores locally
+        this.updateScoresLocal(newScore);
+    }
+    
+        
 
     localStorage.setItem("hasRecipes", true);
     
     localStorage.setItem("numOfUserRecipes", parseInt(localStorage.getItem("numOfUserRecipes")) + 1);
-    // console.log(localStorage.getItem("numOfUserRecipes"));
     localStorage.setItem(`userRecipe${localStorage.getItem("numOfUserRecipes")}HTML`, newRecipeCard.outerHTML);
-    // console.log(localStorage.getItem(`userRecipe${localStorage.getItem("numOfUserRecipes")}HTML`));
 
     // refresh page
     window.scrollTo(0, 0);

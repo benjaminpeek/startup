@@ -1,9 +1,9 @@
 require('dotenv').config();
-const apiKey = process.env.APIKEY;
-console.log(apiKey);
-
 const express = require('express');
 const app = express();
+const DB = require('./database.js');
+
+const apiKey = process.env.APIKEY;
 
 // The service port. In production the front-end code is statically hosted by the service on the same port.
 const port = process.argv.length > 2 ? process.argv[2] : 3000;
@@ -18,15 +18,17 @@ app.use(express.static('public'));
 var apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
-// GetRecipes
+// GetRecipes from my backend, which calls on the third party
 apiRouter.get('/recipes', (_req, res) => {
-  res.send(recipes);
+  fetch(`https://api.spoonacular.com/recipes/random?number=4&apiKey=${apiKey}`)
+    .then((response) => response.json())
+    .then((data) => res.send(data))
 });
 
 // SubmitRecipe
-apiRouter.post('/recipe', (req, res) => {
-  scores = updateRecipes(req.body, scores);
-  res.send(scores);
+apiRouter.post('/recipe', async (req, res) => {
+  DB.addRecipe(req.body);
+  res.status(200);
 });
 
 // Return the application's default page if the path is unknown
@@ -38,9 +40,4 @@ app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
 
-
 let recipes = [];
-function updateRecipes(newRecipe, recipes) {  
-  recipes.push(newRecipe);
-  return recipes;
-}

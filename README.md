@@ -90,7 +90,7 @@ For this deliverable, I added functionality to my website with JavaScript!
 
 ## Service Deliverable
 
-[Mom's Kitchen - JavaScript](https://startup.benjaminpeek.com)
+[Mom's Kitchen - Service](https://startup.benjaminpeek.com)
 
 For this deliverable, I added WebSerive support to my website with Node.js and Express.
 -**HTTP Service with Node.js and Express** Installed Node.js and Express on my startup, then used them to implement services as described in the Simon Service. I used both Node and Express to create my own HTTP services and call on third party web services.
@@ -102,3 +102,13 @@ For this deliverable, I added WebSerive support to my website with Node.js and E
 -**Provided backend service endpoints** Made a SubmitRecipe backend service endpiont for users who want to post a recipe to their own collection of recipes stored on my site.
 
 -**Frontend calling service endpoints** Made a GetRecipes frontend service endpoint for users who want to get recipes from my site.
+
+## Database Deliverable
+
+[Mom's Kitchen - Database](https://startup.benjaminpeek.com)
+
+-**MongoDB Atlas database created** I made my MongoDB database following the tutorial on GitHub and Canvas! I submitted the hostname on the Canvas Data services assignment.
+
+-**Provides backend endpoints for manipulating application data**
+
+-**Stores application data in MongoDB**

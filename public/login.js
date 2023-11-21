@@ -16,6 +16,8 @@ loginForm.addEventListener("submit", e => {
 function login() {
     const name = document.querySelector("#userFirstName");
     localStorage.setItem("userName", name.value);
+    const email = document.querySelector("#emailAddress");
+    localStorage.setItem("userEmail", email.value);
     window.location.href = "profile.html";
     localStorage.setItem("loggedIn", true);
 }
