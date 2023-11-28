@@ -4,7 +4,7 @@ const config = require('./dbConfig.json');
 const url = `mongodb+srv://${config.userName}:${config.password}@${config.hostname}`;
 const client = new MongoClient(url);
 const db = client.db('startup');
-const recipeCollection = db.collection('recipe');
+const recipeCollection = db.collection('recipes');
 
 // This will asynchronously test the connection and exit the process if it fails
 (async function testConnection() {
@@ -15,13 +15,16 @@ const recipeCollection = db.collection('recipe');
     process.exit(1);
   });
 
-async function addRecipe(recipe) {
-    await recipeCollection.insertOne(recipe);
+function addRecipe(recipe) {
+    recipeCollection.insertOne(recipe);
 }
 
-function getRecipes() {
-    
+function getRecipes(email) {
+    let query = {
+        "userEmail": email
+    }
+    const response = recipeCollection.find(query);
+    return response.toArray();
 }
-
 
 module.exports = { addRecipe, getRecipes };

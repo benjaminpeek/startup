@@ -15,17 +15,18 @@ function displayRecipes() {
     }
 
     if (localStorage.getItem('loggedIn') === 'true') {
-        document.getElementById("welcome-message").textContent = "Welcome back, " + localStorage.getItem('userName') + "!";
+        document.getElementById("welcome-message").textContent = "Welcome back, " + localStorage.getItem('userFirstName') + "!";
         document.getElementById("profile-styles").href = 'profile.css';
     
         // display the user's recipes
-        if (localStorage.getItem("hasRecipes") === 'true') {
-            console.log("user has recipes");
-            console.log(localStorage.getItem("numOfUserRecipes"));
-            for (let i = 1; i <= localStorage.getItem("numOfUserRecipes"); i++) {
+        if (localStorage.getItem("allRecipes") !== null) {
+            const recipeArray = JSON.parse(localStorage.getItem("allRecipes"));
+            console.log(recipeArray);
+            for (let i = 0; i < recipeArray.length; i++) {
                 // append the user recipe element items
                 // get the recipe card element from local storage string object
-                let currRecipeHTML = localStorage.getItem(`userRecipe${i}HTML`);
+                let currRecipe = recipeArray[i];
+                let currRecipeHTML = currRecipe.recipeName;
                 console.log(currRecipeHTML);
 
                 document.querySelector("#recipe-card-container").insertAdjacentHTML("beforeend", currRecipeHTML);
@@ -102,10 +103,10 @@ async function addRecipe() {
     let newRecipeIngredientsHTML = newRecipeIngredients.outerHTML;
     
     // make a new recipe card
-    let newRecipeCard_OLD = document.createElement("div");
-    newRecipeCard.setAttribute("class", "recipe-card");
+    let newRecipeCard_Div = document.createElement("div");
+    newRecipeCard_Div.setAttribute("class", "recipe-card");
     // put it all together
-    newRecipeCard_OLD.innerHTML = recipeNameDivHTML + recipeImageHTML + newRecipeIngredientsHTML;
+    newRecipeCard_Div.innerHTML = recipeNameDivHTML + recipeImageHTML + newRecipeIngredientsHTML;
 
     let newRecipeCard = {
         recipeName: recipeNameDivHTML,
@@ -115,22 +116,27 @@ async function addRecipe() {
     }
 
     try {
-        const response = await fetch('/api/score', {
+        const response = await fetch('/api/recipe', {
             method: 'POST',
             headers: {'content-type': 'application/json'},
             body: JSON.stringify(newRecipeCard),
           });
+        console.log("respond success");
+        const recipes = await fetch(`/user_recipes/${localStorage.getItem("userEmail")}`);
+        console.log("recipes fetched");
+        const allRecipes = await recipes.json();
+        console.log("recipes resolved");
+        localStorage.setItem("allRecipes", allRecipes);
     } catch {
-        // If there was an error then just track scores locally
-        this.updateScoresLocal(newScore);
-    }
-    
-        
+        console.log("respond failure");
+        // If there was an error then just put the recipe up locally, will not be saved across sessions
+        document.querySelector("#recipe-card-container").appendChild(newRecipeCard_Div);
+    }   
 
     localStorage.setItem("hasRecipes", true);
     
     localStorage.setItem("numOfUserRecipes", parseInt(localStorage.getItem("numOfUserRecipes")) + 1);
-    localStorage.setItem(`userRecipe${localStorage.getItem("numOfUserRecipes")}HTML`, newRecipeCard.outerHTML);
+    localStorage.setItem(`userRecipe${localStorage.getItem("numOfUserRecipes")}HTML`, newRecipeCard_Div.outerHTML);
 
     // refresh page
     window.scrollTo(0, 0);
@@ -139,7 +145,7 @@ async function addRecipe() {
     document.getElementById("ingredient-list").innerHTML = "<li><input id='ingredient1' type='text' placeholder='ingredient 1' required /></li><li><input id='ingredient2' type='text' placeholder='ingredient 2' /></li><li><input id='ingredient3' type='text' placeholder='ingredient 3' /></li><button id='add-ingredient-btn' onclick='addIngredient()' type='button'>add ingredient</button>";
     localStorage.removeItem("recipeImage");
     displayRecipes();
-    window.location.href = "profile.html";
+    // window.location.href = "profile.html";
 }
 
 function clearRecipes() {

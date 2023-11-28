@@ -25,10 +25,21 @@ apiRouter.get('/recipes', (_req, res) => {
     .then((data) => res.send(data))
 });
 
+// Get user's recipes
+apiRouter.get(`/user_recipes/:userEmail`, async (_req, res) => {
+  console.log("get endpoint hit");
+  const email = _req.params.userEmail;
+  const response = await DB.getRecipes(email);
+  console.log("status ok");
+  res.send(response);
+});
+
 // SubmitRecipe
-apiRouter.post('/recipe', async (req, res) => {
+apiRouter.post('/recipe', (req, res) => {
+  console.log("post endpoint hit");
   DB.addRecipe(req.body);
-  res.status(200);
+  console.log("status ok post");
+  res.status(200).send(req.body);
 });
 
 // Return the application's default page if the path is unknown
