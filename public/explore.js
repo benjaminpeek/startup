@@ -1,6 +1,7 @@
+const apiKey = process.env.APIKEY;
 
 async function displayRecipes() {
-  const response = await fetch(`/api/recipes`);
+  const response = await fetch(`/api/recipes/random?number=4&apiKey=${apiKey}`);
   let data = await response.json();
       let recipe1 = await data.recipes[0];
       let recipe2 = await data.recipes[1];
