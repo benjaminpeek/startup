@@ -27,4 +27,8 @@ function getRecipes(email) {
     return response.toArray();
 }
 
+// function deleteRecipes(email) {
+//   recipeCollection.deleteMany({userEmail: email});
+// }
+
 module.exports = { addRecipe, getRecipes };

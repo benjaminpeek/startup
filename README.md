@@ -109,6 +109,6 @@ For this deliverable, I added WebSerive support to my website with Node.js and E
 
 -**MongoDB Atlas database created** I made my MongoDB database following the tutorial on GitHub and Canvas! I submitted the hostname on the Canvas Data services assignment.
 
--**Provides backend endpoints for manipulating application data**
+-**Provides backend endpoints for manipulating application data** Made it so the user's recipes were uploaded to the database and then displayed on their Profile page, calling from the database.
 
--**Stores application data in MongoDB**
+-**Stores application data in MongoDB** Made it so things I was storing in Local Storage are now being stored in the database, and the application's recipes are being stored and displayed from there as well.

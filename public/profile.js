@@ -2,14 +2,14 @@
 
 let potentialIngredientCount = 3;
 let ingredientList = [];
-let clearRecipesPressed = false;
-if (localStorage.getItem("hasRecipes") === 'false' || localStorage.getItem("numOfUserRecipes") === null) {
-    localStorage.setItem("numOfUserRecipes", 0);
-}
+// let clearRecipesPressed = false;
+// if (localStorage.getItem("hasRecipes") === 'false' || localStorage.getItem("numOfUserRecipes") === null) {
+//     localStorage.setItem("numOfUserRecipes", 0);
+// }
 
 displayRecipes();
 
-function displayRecipes() {
+async function displayRecipes() {
     if (localStorage.getItem("clearRecipesPressed") === 'true') {
         document.querySelector("#recipe-card-container").innerHTML = "";
     }
@@ -19,17 +19,17 @@ function displayRecipes() {
         document.getElementById("profile-styles").href = 'profile.css';
     
         // display the user's recipes
-        if (localStorage.getItem("allRecipes") !== null) {
-            const recipeArray = JSON.parse(localStorage.getItem("allRecipes"));
-            console.log(recipeArray);
-            for (let i = 0; i < recipeArray.length; i++) {
-                // append the user recipe element items
-                // get the recipe card element from local storage string object
-                let currRecipe = recipeArray[i];
-                let currRecipeHTML = currRecipe.recipeName;
-                console.log(currRecipeHTML);
+        let recipes = await fetch(`/api/user_recipes/${localStorage.getItem("userEmail")}`);
+        recipes = await recipes.json();
+        if (recipes !== null) {
+            console.log("recipes are in storage");
+            for (let recipe of recipes) {
+                // console.log(recipe);
+                let currRecipeDiv = document.createElement("div");
+                currRecipeDiv.setAttribute("class", "recipe-card");
+                currRecipeDiv.innerHTML = recipe.recipeName + recipe.recipeImage + recipe.recipeIngredients;
 
-                document.querySelector("#recipe-card-container").insertAdjacentHTML("beforeend", currRecipeHTML);
+                document.querySelector("#recipe-card-container").appendChild(currRecipeDiv);
             }
         }   
     } else {
@@ -121,13 +121,8 @@ async function addRecipe() {
             headers: {'content-type': 'application/json'},
             body: JSON.stringify(newRecipeCard),
           });
-        console.log("respond success");
-        const recipes = await fetch(`/user_recipes/${localStorage.getItem("userEmail")}`);
-        console.log("recipes fetched");
-        const allRecipes = await recipes.json();
-        console.log("recipes resolved");
-        localStorage.setItem("allRecipes", allRecipes);
-    } catch {
+    } catch (error) {
+        console.log(error.message);
         console.log("respond failure");
         // If there was an error then just put the recipe up locally, will not be saved across sessions
         document.querySelector("#recipe-card-container").appendChild(newRecipeCard_Div);
@@ -135,8 +130,8 @@ async function addRecipe() {
 
     localStorage.setItem("hasRecipes", true);
     
-    localStorage.setItem("numOfUserRecipes", parseInt(localStorage.getItem("numOfUserRecipes")) + 1);
-    localStorage.setItem(`userRecipe${localStorage.getItem("numOfUserRecipes")}HTML`, newRecipeCard_Div.outerHTML);
+    // localStorage.setItem("numOfUserRecipes", parseInt(localStorage.getItem("numOfUserRecipes")) + 1);
+    // localStorage.setItem(`userRecipe${localStorage.getItem("numOfUserRecipes")}HTML`, newRecipeCard_Div.outerHTML);
 
     // refresh page
     window.scrollTo(0, 0);
@@ -145,15 +140,15 @@ async function addRecipe() {
     document.getElementById("ingredient-list").innerHTML = "<li><input id='ingredient1' type='text' placeholder='ingredient 1' required /></li><li><input id='ingredient2' type='text' placeholder='ingredient 2' /></li><li><input id='ingredient3' type='text' placeholder='ingredient 3' /></li><button id='add-ingredient-btn' onclick='addIngredient()' type='button'>add ingredient</button>";
     localStorage.removeItem("recipeImage");
     displayRecipes();
-    // window.location.href = "profile.html";
+    window.location.href = "profile.html";
 }
 
-function clearRecipes() {
-    document.querySelector("#recipe-card-container").innerHTML = "";
-    for (let i = 1; i <= localStorage.getItem("numOfUserRecipes"); i++) {
-        localStorage.removeItem(`userRecipe${i}HTML`);
-    }
-    localStorage.setItem("numOfUserRecipes", 0);
-    localStorage.setItem("hasRecipes", false);
-    localStorage.setItem("clearRecipesPressed", true);
-}
+// function clearRecipes() {
+//     document.querySelector("#recipe-card-container").innerHTML = "";
+//     for (let i = 1; i <= localStorage.getItem("numOfUserRecipes"); i++) {
+//         localStorage.removeItem(`userRecipe${i}HTML`);
+//     }
+//     localStorage.setItem("numOfUserRecipes", 0);
+//     localStorage.setItem("hasRecipes", false);
+//     localStorage.setItem("clearRecipesPressed", true);
+// }

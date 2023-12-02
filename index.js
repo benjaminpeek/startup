@@ -1,7 +1,11 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
+app.use(bodyParser.json({limit: '50mb'}));
+app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 const DB = require('./database.js');
+const { MongoDBCollectionNamespace } = require('mongodb');
 
 const apiKey = process.env.APIKEY;
 
@@ -9,7 +13,7 @@ const apiKey = process.env.APIKEY;
 const port = process.argv.length > 2 ? process.argv[2] : 3000;
 
 // JSON body parsing using built-in middleware
-app.use(express.json());
+app.use(express.json({limit: '50mb'}));
 
 // Serve up the front-end static content hosting
 app.use(express.static('public'));
@@ -42,6 +46,15 @@ apiRouter.post('/recipe', (req, res) => {
   res.status(200).send(req.body);
 });
 
+// Delete recipes
+// apiRouter.delete(`/delete/:userEmail`, async (req, res) => {
+//   console.log(req.params.userEmail);
+//   res.status(200);
+//   res.send("done");
+//   const result = await DB.deleteRecipes(req.params.userEmail);
+//   res.send(result);
+// });
+
 // Return the application's default page if the path is unknown
 app.use((_req, res) => {
   res.sendFile('index.html', { root: 'public' });
@@ -50,5 +63,3 @@ app.use((_req, res) => {
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
-
-let recipes = [];
