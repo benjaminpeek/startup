@@ -2,10 +2,10 @@
 async function displayRecipes() {
   const response = await fetch(`/api/recipes`);
   let data = await response.json();
-      let recipe1 = await data.recipes[0]
-      let recipe2 = await data.recipes[1]
-      let recipe3 = await data.recipes[2]
-      let recipe4 = await data.recipes[3]
+      let recipe1 = await data.recipes[0];
+      let recipe2 = await data.recipes[1];
+      let recipe3 = await data.recipes[2];
+      let recipe4 = await data.recipes[3];
 
       const recipeCard1El = document.getElementById("recipe-card-1");
       let recipeCard1IngredientsHTML = "";
