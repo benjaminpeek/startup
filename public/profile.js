@@ -129,9 +129,6 @@ async function addRecipe() {
     }   
 
     localStorage.setItem("hasRecipes", true);
-    
-    // localStorage.setItem("numOfUserRecipes", parseInt(localStorage.getItem("numOfUserRecipes")) + 1);
-    // localStorage.setItem(`userRecipe${localStorage.getItem("numOfUserRecipes")}HTML`, newRecipeCard_Div.outerHTML);
 
     // refresh page
     window.scrollTo(0, 0);

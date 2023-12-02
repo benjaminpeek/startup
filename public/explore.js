@@ -1,12 +1,11 @@
 
 async function displayRecipes() {
-  await fetch(`/api/recipes`)
-    .then((response) => response.json())
-    .then((data) => {
-      let recipe1 = data.recipes[0]
-      let recipe2 = data.recipes[1]
-      let recipe3 = data.recipes[2]
-      let recipe4 = data.recipes[3]
+  const response = await fetch(`/api/recipes`);
+  let data = await response.json();
+      let recipe1 = await data.recipes[0]
+      let recipe2 = await data.recipes[1]
+      let recipe3 = await data.recipes[2]
+      let recipe4 = await data.recipes[3]
 
       const recipeCard1El = document.getElementById("recipe-card-1");
       let recipeCard1IngredientsHTML = "";
@@ -35,8 +34,7 @@ async function displayRecipes() {
         recipeCard4IngredientsHTML += `<li>${ingredient.name}</li>`;
       }
       recipeCard4El.innerHTML = `<div class="recipe-name"><p>${recipe4.title}</p></div><img src="${recipe4.image}" class="recipe-image" /> <ul class="recipe-ingredients">${recipeCard4IngredientsHTML}</ul>`;
-    });
-  }
+    };
   
 displayRecipes();
   
