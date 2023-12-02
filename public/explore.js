@@ -1,6 +1,6 @@
 
-function displayRecipes() {
-  fetch(`/api/recipes`)
+async function displayRecipes() {
+  await fetch(`/api/recipes`)
     .then((response) => response.json())
     .then((data) => {
       let recipe1 = data.recipes[0]
