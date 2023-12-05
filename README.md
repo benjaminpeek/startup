@@ -112,3 +112,15 @@ For this deliverable, I added WebSerive support to my website with Node.js and E
 -**Provides backend endpoints for manipulating application data** Made it so the user's recipes were uploaded to the database and then displayed on their Profile page, calling from the database.
 
 -**Stores application data in MongoDB** Made it so things I was storing in Local Storage are now being stored in the database, and the application's recipes are being stored and displayed from there as well.
+
+## Login Deliverable
+
+[Mom's Kitchen - Database](https://startup.benjaminpeek.com)
+
+-**Supports new user registration**
+
+-**Supports existing user authentication**
+
+-**Stores and retrieves credentials in MongoDB** 
+
+-**Restricts application functionality based upon authentication** The user is not able to add recipes to their Profile page until they have been authenticated. They are able to go to the Explore page and see recipes from the web, still, though, even without logging in.
