@@ -59,7 +59,7 @@ For this deliverable, I made an HTML-only version of my application.
 
 ## CSS Deliverable
 
-[Mom's Kitchen - CSS](https://startup.benjaminpeek.com)
+[Mom's Kitchen](https://startup.benjaminpeek.com)
 
 For this deliverable, I added CSS to my HTML-only website to give it a lot more character and visual appeal!
 
@@ -77,7 +77,7 @@ For this deliverable, I added CSS to my HTML-only website to give it a lot more 
 
 ## JavaScript Deliverable
 
-[Mom's Kitchen - JavaScript](https://startup.benjaminpeek.com)
+[Mom's Kitchen](https://startup.benjaminpeek.com)
 
 For this deliverable, I added functionality to my website with JavaScript!
 -**Login Support** Added some functionality to the login form on the homepage of my website, takes user to their profile and remembers their name in local storage.
@@ -90,7 +90,7 @@ For this deliverable, I added functionality to my website with JavaScript!
 
 ## Service Deliverable
 
-[Mom's Kitchen - Service](https://startup.benjaminpeek.com)
+[Mom's Kitchen](https://startup.benjaminpeek.com)
 
 For this deliverable, I added WebSerive support to my website with Node.js and Express.
 -**HTTP Service with Node.js and Express** Installed Node.js and Express on my startup, then used them to implement services as described in the Simon Service. I used both Node and Express to create my own HTTP services and call on third party web services.
@@ -105,7 +105,7 @@ For this deliverable, I added WebSerive support to my website with Node.js and E
 
 ## Database Deliverable
 
-[Mom's Kitchen - Database](https://startup.benjaminpeek.com)
+[Mom's Kitchen](https://startup.benjaminpeek.com)
 
 -**MongoDB Atlas database created** I made my MongoDB database following the tutorial on GitHub and Canvas! I submitted the hostname on the Canvas Data services assignment.
 
@@ -115,7 +115,7 @@ For this deliverable, I added WebSerive support to my website with Node.js and E
 
 ## Login Deliverable
 
-[Mom's Kitchen - Database](https://startup.benjaminpeek.com)
+[Mom's Kitchen](https://startup.benjaminpeek.com)
 
 -**Supports new user registration**
 
