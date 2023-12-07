@@ -15,7 +15,7 @@ async function displayRecipes() {
     }
 
     if (localStorage.getItem('loggedIn') === 'true') {
-        document.getElementById("welcome-message").textContent = "Welcome back, " + localStorage.getItem('userFirstName') + "!";
+        document.getElementById("welcome-message").textContent = "Welcome back, " + localStorage.getItem('userName') + "!";
         document.getElementById("profile-styles").href = 'profile.css';
     
         // display the user's recipes

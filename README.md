@@ -117,10 +117,10 @@ For this deliverable, I added WebSerive support to my website with Node.js and E
 
 [Mom's Kitchen](https://startup.benjaminpeek.com)
 
--**Supports new user registration**
+-**Supports new user registration** The user is able to create their own account using their email address, desired name, and password.
 
--**Supports existing user authentication**
+-**Supports existing user authentication** Users who have already created their account are able to log back in after signing up and see their own recipes and recipes from the web.
 
--**Stores and retrieves credentials in MongoDB** 
+-**Stores and retrieves credentials in MongoDB**  All of the information for the user's authentication and saved recipes are stored in MongoDB.
 
--**Restricts application functionality based upon authentication** The user is not able to add recipes to their Profile page until they have been authenticated. They are able to go to the Explore page and see recipes from the web, still, though, even without logging in.
+-**Restricts application functionality based upon authentication** The user is not able to add recipes to their Profile page until they have been authenticated. They are able to go to the Explore page and see recipes from the web, still, though, even without logging in. The user is also only able to see randomized recipes from the web API when they have logged in / created an account!
