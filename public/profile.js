@@ -14,7 +14,7 @@ async function displayRecipes() {
         document.querySelector("#recipe-card-container").innerHTML = "";
     }
 
-    if (localStorage.getItem('loggedIn') === 'true') {
+    if (sessionStorage.getItem('loggedIn') === 'true') {
         document.getElementById("welcome-message").textContent = "Welcome back, " + localStorage.getItem('userName') + "!";
         document.getElementById("profile-styles").href = 'profile.css';
     
