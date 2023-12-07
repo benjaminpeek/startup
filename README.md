@@ -123,4 +123,4 @@ For this deliverable, I added WebSerive support to my website with Node.js and E
 
 -**Stores and retrieves credentials in MongoDB**  All of the information for the user's authentication and saved recipes are stored in MongoDB.
 
--**Restricts application functionality based upon authentication** The user is not able to add recipes to their Profile page until they have been authenticated. They are able to go to the Explore page and see recipes from the web, still, though, even without logging in. The user is also only able to see randomized recipes from the web API when they have logged in / created an account!
+-**Restricts application functionality based upon authentication** The user is not able to add recipes to their Profile page until they have been authenticated. They are able to go to the Explore page and see recipes from the web, still, though, even without logging in.
