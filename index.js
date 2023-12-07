@@ -9,8 +9,10 @@ app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 const DB = require('./database.js');
 const { MongoDBCollectionNamespace } = require('mongodb');
 
+const apiKey = require('./apiKey.json');
+
 const authCookieName = 'token';
-const apiKey = process.env.APIKEY;
+// const apiKey = process.env.APIKEY;
 
 // The service port may be set on the command line
 const port = process.argv.length > 2 ? process.argv[2] : 3000;
@@ -94,7 +96,7 @@ secureApiRouter.use(async (req, res, next) => {
 
 // GetRecipes from my backend, which calls on the third party
 apiRouter.get('/recipes', (_req, res) => {
-  fetch(`https://api.spoonacular.com/recipes/random?number=4&apiKey=${apiKey}`)
+  fetch(`https://api.spoonacular.com/recipes/random?number=4&apiKey=${apiKey.value}`)
     .then((response) => response.json())
     .then((data) => res.send(data))
 });
