@@ -129,10 +129,10 @@ For this deliverable, I added WebSerive support to my website with Node.js and E
 
 [Mom's Kitchen](https://startup.benjaminpeek.com)
 
--**Backend listens for WebSocket connection**
+-**Backend listens for WebSocket connection** Set up backend following the Simon logic and tutorial to set up my backend WebSocket connections with peer proxy.
 
--**Frontend makes WebSocket connection**
+-**Frontend makes WebSocket connection** The frontend configures the WebSocket connection in login.js, profile.js, explore.js, and about.js where I use the socket to send and receive data.
 
--**Data sent over WebSocket connection**
+-**Data sent over WebSocket connection** Data is sent over the connection when users connect and disconnect from the website, tracking how many users are currently on the site.
 
--**WebSocket data displayed in the application interface**
+-**WebSocket data displayed in the application interface** On the home page, above the login form, it says how many users are currently on the site, information that is gained by sending and receiving data through the WebSocket.
