@@ -136,3 +136,15 @@ For this deliverable, I added WebSerive support to my website with Node.js and E
 -**Data sent over WebSocket connection** Data is sent over the connection when users connect and disconnect from the website, tracking how many users are currently on the site.
 
 -**WebSocket data displayed in the application interface** On the home page, above the login form, it says how many users are currently on the site, information that is gained by sending and receiving data through the WebSocket.
+
+## React Deliverable
+
+[Mom's Kitchen](https://startup.benjaminpeek.com)
+
+-**Bundled using WebPack and Babel as generated from using create-react-app**
+
+-**Multiple functional react components**
+
+-**React router**
+
+-**eact hooks**
