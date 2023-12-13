@@ -36,7 +36,11 @@ async function displayRecipes() {
       recipeCard4El.innerHTML = `<div class="recipe-name"><p>${recipe4.title}</p></div><img src="${recipe4.image}" class="recipe-image" /> <ul class="recipe-ingredients">${recipeCard4IngredientsHTML}</ul>`;
     };
   
-displayRecipes();
+if (sessionStorage.getItem("loggedIn") === true) {
+  displayRecipes();
+} else {
+  document.querySelector("#explore-title").innerText = "Please login to use this API feature."
+}
 
 function configureWebSocket() {
   const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
