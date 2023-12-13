@@ -76,10 +76,37 @@ async function getUser(email) {
     return null;
 }
 
-// function login() {
-//     const name = document.querySelector("#userFirstName");
-//     localStorage.setItem("userFirstName", name.value);
-//     const email = document.querySelector("#emailAddress");
-//     localStorage.setItem("userEmail", email.value);
-//     localStorage.setItem("loggedIn", true);
-// }
+  // Functionality for peer communication using WebSocket
+
+  function configureWebSocket() {
+    const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
+    let socket = new WebSocket(`${protocol}://${window.location.host}/ws`);
+    socket.onopen = () => {
+      displayMsg('connected');
+    };
+    socket.onclose = () => {
+      displayMsg('disconnected');
+    };
+    socket.onmessage = async (event) => {
+      const msg = JSON.parse(await event.data);
+      displayMsg(msg);
+    };
+
+    return socket;
+  }
+
+  function displayMsg(msg) {
+    const userCount = document.querySelector('#user-count-text');
+    userCount.innerText = "users on the site currently: " + msg;
+  }
+
+  function broadcastEvent(from, type, value) {
+    const event = {
+      from: from,
+      type: type,
+      value: value,
+    };
+    this.socket.send(JSON.stringify(event));
+  }
+
+  let socket = configureWebSocket();

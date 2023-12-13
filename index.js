@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 const DB = require('./database.js');
+const { peerProxy } = require('./peerProxy.js');
 const { MongoDBCollectionNamespace } = require('mongodb');
 
 const apiKey = require('./apiKey.json');
@@ -141,6 +142,8 @@ function setAuthCookie(res, authToken) {
   });
 }
 
-app.listen(port, () => {
+const httpService = app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
+
+peerProxy(httpService);

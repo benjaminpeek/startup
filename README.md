@@ -124,3 +124,15 @@ For this deliverable, I added WebSerive support to my website with Node.js and E
 -**Stores and retrieves credentials in MongoDB**  All of the information for the user's authentication and saved recipes are stored in MongoDB.
 
 -**Restricts application functionality based upon authentication** The user is not able to add recipes to their Profile page until they have been authenticated. They are able to go to the Explore page and see recipes from the web, still, though, even without logging in.
+
+## WebSocket Deliverable
+
+[Mom's Kitchen](https://startup.benjaminpeek.com)
+
+-**Backend listens for WebSocket connection**
+
+-**Frontend makes WebSocket connection**
+
+-**Data sent over WebSocket connection**
+
+-**WebSocket data displayed in the application interface**

@@ -18,13 +18,14 @@ function peerProxy(httpServer) {
   wss.on('connection', (ws) => {
     const connection = { id: uuid.v4(), alive: true, ws: ws };
     connections.push(connection);
+    connections.forEach((c) => {
+      c.ws.send(connections.length);
+    });
 
     // Forward messages to everyone except the sender
-    ws.on('message', function message(data) {
+    ws.on('message', function message() {
       connections.forEach((c) => {
-        if (c.id !== connection.id) {
-          c.ws.send(data);
-        }
+        c.ws.send(connections.length);
       });
     });
 
@@ -35,6 +36,9 @@ function peerProxy(httpServer) {
           connections.splice(i, 1);
           return true;
         }
+      });
+      connections.forEach((c) => {
+        c.ws.send(connections.length);
       });
     });
 
