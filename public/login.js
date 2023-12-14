@@ -51,7 +51,7 @@ async function loginOrCreate(endpoint) {
     if (response.ok) {
       localStorage.setItem('userName', userName);
       localStorage.setItem('userEmail', userEmail);
-      sessionStorage.setItem("loggedIn", true);
+      localStorage.setItem("loggedIn", true);
       window.location.href = 'profile.html';
     } else {
       const body = await response.json();
