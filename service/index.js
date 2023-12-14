@@ -10,7 +10,7 @@ const DB = require('./database.js');
 const { peerProxy } = require('./peerProxy.js');
 const { MongoDBCollectionNamespace } = require('mongodb');
 
-const apiKey = require('./apiKey.json');
+const apiKey = require('../apiKey.json');
 
 const authCookieName = 'token';
 // const apiKey = process.env.APIKEY;
