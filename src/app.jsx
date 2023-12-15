@@ -19,7 +19,7 @@ export default function App() {
     return (
       <div className='body bg-dark text-light'>
         <header>
-			<div class="logo">
+			<div className="logo">
 				<a href="index.html"><img src="images/moms-kitchen_logo.svg" alt="logo" /></a>
 			</div>
 
