@@ -143,7 +143,7 @@ For this deliverable, I added WebSerive support to my website with Node.js and E
 
 -**Bundled using WebPack and Babel as generated from using create-react-app** Installed React and formatted my directories to be in the format the Vite expects, bundled together correctly.
 
--**Multiple functional react components** I did add the React components for each page in their relating .jsx files for Login, Profile, Explore, and the About page.
+-**Multiple functional react components** I did add the React components for each page in their relating .jsx files for Login, Profile, Explore, and the About page. The original content is not all there, but the components call their functions correctly and display different things based on the page selected.
 
 -**React router** Implemented the React router so the application knows which page the user wants to view. Followed the instruction in my code to use React router to call upon the different webpage functions when the user clicks on them in the nav bar.
 

@@ -8,16 +8,16 @@ import { Profile } from './profile/profile';
 import { Explore } from './explore/explore';
 import { About } from './about/about';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <BrowserRouter>
-    <div className='body bg-dark text-light'>sub components here</div>
-  </BrowserRouter>
-);
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(
+//   <BrowserRouter>
+//     <div className='body bg-dark text-light'>sub components here</div>
+//   </BrowserRouter>
+// );
 
 export default function App() {
     return (
-      <div className='body bg-dark text-light'>
+      <BrowserRouter className='body bg-dark text-light'>
         <header>
 			<div className="logo">
 				<a href="index.html"><img src="images/moms-kitchen_logo.svg" alt="logo" /></a>
@@ -64,7 +64,7 @@ export default function App() {
 			<a href="https://simon.benjaminpeek.com" target="_blank">Simon</a>
 			<a href="https://github.com/benjaminpeek/startup" target="_blank">Author's GitHub</a>
 		</footer>
-      </div>
+      </BrowserRouter>
     );
   }
 
