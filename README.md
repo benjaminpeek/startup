@@ -145,6 +145,6 @@ For this deliverable, I added WebSerive support to my website with Node.js and E
 
 -**Multiple functional react components**
 
--**React router**
+-**React router** Implemented the React router so the application knows which page the user wants to view. Followed the instruction in my code to use React router to call upon the different webpage functions when the user clicks on them in the nav bar.
 
 -**React hooks**
