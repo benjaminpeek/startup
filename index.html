@@ -21,76 +21,9 @@
 		/>
 
 	</head>
-	<body>
-		<header>
-			<div class="logo">
-				<a href="index.html"><img src="images/moms-kitchen_logo.svg" alt="logo" /></a>
-			</div>
-
-			<!-- will be changed with react -->
-			<nav>
-				<a href="index.html">Home</a>
-				<a href="profile.html">Profile</a>
-				<a href="explore.html">Explore</a>
-				<a href="about.html">About</a>
-			</nav>
-		</header>
-
-		<main>
-			<div class="user-count" id="user-count">
-				<h3 id="user-count-text"></h3>
-			</div>
-
-			<div class="landing-intro">
-				<p>Share your favorite family recipes with other home cooks.</p>
-			</div>
-
-			<div class="login-container">
-				<h2>Join the fun</h2>
-				<!-- login form -->
-				<form id="login-form">
-					<input type="email" placeholder="Email Address" id="userEmail" required />
-					<input type="text" placeholder="First Name" name="fname" id="userName" required />
-					<!-- <input type="text" placeholder="Last Name" name="lname" required /> -->
-					<input type="password" placeholder="Password" name="password" id="userPassword" required />
-					<div class="signup-btn">
-						<button  onclick="loginUser()">Login</button>
-					</div>
-
-					<!-- <div class="login-options-wrapper"> -->
-						<!-- <button class="forgot-btn">Forgot Password?</button> -->
-						<!-- <button class="google-login">
-							Login with Google (
-							<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 488 512">
-								<style>
-									svg {
-										fill: #ffffff;
-									}
-								</style>
-								<path
-									d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"
-								/>
-							</svg>
-							)
-						</button> -->
-					<!-- </div> -->
-					<hr />
-					<div class="signup-txt">
-						<h4>Haven't joined yet?</h4>
-					</div>
-					<div class="signup-btn">
-						<button  onclick="createUser()">Create Account!</button>
-					</div>
-				</form>
-			</div>
-			<br>
-		</main>
-
-		<footer>
-			<a href="https://simon.benjaminpeek.com" target="_blank">Simon</a>
-			<a href="https://github.com/benjaminpeek/startup" target="_blank">Author's GitHub</a>
-		</footer>
-
-		<script src="login.js"></script>
-	</body>
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script type="module" src="/index.jsx"></script>
+</body>
 </html>
