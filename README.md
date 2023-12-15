@@ -141,10 +141,10 @@ For this deliverable, I added WebSerive support to my website with Node.js and E
 
 [Mom's Kitchen](https://startup.benjaminpeek.com)
 
--**Bundled using WebPack and Babel as generated from using create-react-app**
+-**Bundled using WebPack and Babel as generated from using create-react-app** Installed React and formatted my directories to be in the format the Vite expects, bundled together correctly.
 
 -**Multiple functional react components**
 
 -**React router**
 
--**eact hooks**
+-**React hooks**
