@@ -23,7 +23,7 @@ export default function App() {
 				<a href="index.html"><img src="images/moms-kitchen_logo.svg" alt="logo" /></a>
 			</div>
 
-			<nav className='navbar fixed-top navbar-dark'>
+			<nav className='navbar fixed-top'>
                 <div className='navbar-brand'>
                     Mom's Kitchen<sup>&reg;</sup>
                 </div>

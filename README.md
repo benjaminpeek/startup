@@ -147,6 +147,6 @@ For this deliverable, I added WebSerive support to my website with Node.js and E
 
 -**React router** Implemented the React router so the application knows which page the user wants to view. Followed the instruction in my code to use React router to call upon the different webpage functions when the user clicks on them in the nav bar.
 
--**React hooks** Unfortunately, I was also unable to complete this part of the implementation. My code does demonstrate bundling with Vite and React Router, though, along with meaningful Git commits.
+-**React hooks** Unfortunately, I was also unable to complete this part of the implementation.
 
 -**Multiple Git commits with meaningful comments** As I worked, I committed to GitHub multiple times with explanatory comments.
